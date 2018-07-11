@@ -11,4 +11,4 @@
 4 - On the second terminal ( the one you loaded the **assets** service ), run `call assets.get`. It should download the file from azure storage to the download folder but instead it will throw and error `>> ERROR: stream.pipe is not a function`.
 
 
-**PS**: If you run and load both services within the same terminal/broker it should work fine.
+**PS**: If you run and load both services within the same terminal/broker it should work fine. Moreover, it also works if you use `fs.createReadStream('./resources/picture.png')` instead of `this.blobService.createReadStream('storage', ctx.params.filename)` in the `readStream` function.
